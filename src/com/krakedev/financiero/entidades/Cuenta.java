@@ -11,6 +11,7 @@ public class Cuenta {
 		this.id = id;
 		this.saldoActual = 0;
 		this.tipo = "A";
+		this.propietario = new Cliente();
 	}
 
 	public String getId() {
@@ -44,7 +45,7 @@ public class Cuenta {
 	public void setPropietario(Cliente propietario) {
 		this.propietario = propietario;
 	}
-
+	
 	public void imprimir() {
 		String mensaje = "Id: " + this.id + ", Saldo Actual: " + this.saldoActual + ", Tipo: " + this.tipo
 				+ ", Cedula Cliente: " + propietario.getCedula();
